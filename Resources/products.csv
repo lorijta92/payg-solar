@@ -1,0 +1,43 @@
+id,name,type
+1,Bright Move,LARGEPADV1_KEYCODE
+2,Bright Move Smart,LARGEPADV1_KEYCODE
+3,Bright Home 29,LARGEPADV1_KEYCODE
+4,Bright Home 58,LARGEPADV1_KEYCODE
+5,Bright Sun Bell,CABLE
+6,Bright Sun Bell Smart,CABLE
+7,Sun King Eco Easy Buy,ECO
+8,Fosera LSHS,LARGEPADV1_KEYCODE
+9,Fosera LSHS GSM,FOSERA_LSHS_GSM
+10,Fosera PSHS,LARGEPADV1_KEYCODE
+11,Sun King Pro Easy Buy,CABLE_KEYCODE_HYBRID
+12,Sun King Home 60 Easy Buy,CABLE_KEYCODE_HYBRID
+13,Sun King Boom Easy Buy,CABLE_KEYCODE_HYBRID
+14,Sun King Home 120 Easy Buy,CABLE_KEYCODE_HYBRID
+15,Sun King Home 120 Plus Easy Buy,CABLE_KEYCODE_HYBRID
+16,Sun King Home 40Z Easy Buy,CABLE_KEYCODE_HYBRID
+17,Sun King Home 400 Easybuy Keypad,LARGEPADV1_KEYCODE
+18,Sun King Home 400 Easybuy GSM,GLP_SK50X
+19,JUA Home Mate H1G,LARGEPADV1_KEYCODE
+20,JUA Home Mate H1G Lite,LARGEPADV1_KEYCODE
+21,JUA Home Mate H2G,LARGEPADV1_KEYCODE
+22,Niwa Energy 50 (128Wh),LARGEPADV1_KEYCODE
+23,Niwa Energy 50 (42Wh),LARGEPADV1_KEYCODE
+24,Omnivoltaic Camp,OV_KEYCODE
+25,Omnivoltaic Catch (Keycode),OV_KEYCODE
+26,Omnivoltaic M400,OV_KEYCODE
+27,Omnivoltaic M600,OV_KEYCODE
+28,Omnivoltaic Pilot Bluetooth,OV_BLUETOOTH
+29,Omnivoltaic Pilot L190 Bluetooth,OV_BLUETOOTH
+30,Polar PAYG Product,CABLE_KEYCODE_HYBRID
+31,Polar GSM Product,ZA_GSM
+32,Polar Non-metered Product,NOP
+33,Renewit Home Power Station,LARGEPADV1_KEYCODE
+34,Renewit Small Home Power Station,LARGEPADV1_KEYCODE
+35,Solar Village Battery Stick,CABLE
+36,WOWsolar60,AMPED
+37,WOWsolar100,AMPED
+38,WOWsolarTV,AMPED
+39,BioLite SolarHome 620,BIOLITE
+40,Futurepump,FUTURE_GSM
+41,RAYGO150,LARGEPADV1_KEYCODE
+42,Polar Wireless Product,IOT_API
