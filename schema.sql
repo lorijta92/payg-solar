@@ -1,5 +1,5 @@
 CREATE TABLE account_state_transitions (
-    id BIGINT,
+    id BIGINT PRIMARY KEY,
     created_when DATETIME2,
     started_when DATETIME2,
     account_id INT,
@@ -9,7 +9,7 @@ CREATE TABLE account_state_transitions (
 );
 
 CREATE TABLE accounts (
-    id BIGINT,
+    id BIGINT PRIMARY KEY,
     group_id BIGINT,
     organization_id BIGINT,
     registration_date DATETIME2,
@@ -18,13 +18,13 @@ CREATE TABLE accounts (
 );
 
 CREATE TABLE group_product_associations (
-    id BIGINT,
+    id BIGINT PRIMARY KEY,
     group_id BIGINT,
     product_id BIGINT
 );
 
 CREATE TABLE groups (
-    id BIGINT,
+    id BIGINT PRIMARY KEY,
     name TEXT,
     price_upfront INT,
     price_unlock INT,
@@ -33,15 +33,15 @@ CREATE TABLE groups (
 );
 
 CREATE TABLE payments (
-    id BIGINT,
+    id BIGINT PRIMARY KEY,
     effective_when DATETIME2,
     account_id BIGINT,
     currency TEXT,
-    ammount INT
+    amount INT
 );
 
 CREATE TABLE products (
-    id BIGINT,
+    id BIGINT PRIMARY KEY,
     name TEXT,
     type TEXT
 );
