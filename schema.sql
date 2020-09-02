@@ -1,7 +1,7 @@
 CREATE TABLE account_state_transitions (
     id BIGINT PRIMARY KEY,
-    created_when DATETIME2,
-    started_when DATETIME2,
+    created_when TIMESTAMP,
+    started_when TIMESTAMP,
     account_id INT,
     from_state TEXT,
     to_state TEXT,
@@ -12,7 +12,7 @@ CREATE TABLE accounts (
     id BIGINT PRIMARY KEY,
     group_id BIGINT,
     organization_id BIGINT,
-    registration_date DATETIME2,
+    registration_date TIMESTAMP,
     is_written_off BOOLEAN,
     is_unlocked BOOLEAN
 );
@@ -34,7 +34,7 @@ CREATE TABLE groups (
 
 CREATE TABLE payments (
     id BIGINT PRIMARY KEY,
-    effective_when DATETIME2,
+    effective_when TIMESTAMP,
     account_id BIGINT,
     currency TEXT,
     amount INT
