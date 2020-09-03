@@ -1,3 +1,5 @@
+-- acct_id: accounts, a_s_t, payments
+
 CREATE TABLE account_state_transitions (
     id BIGINT PRIMARY KEY,
     created_when TIMESTAMP,
