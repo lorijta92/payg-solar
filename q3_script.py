@@ -36,5 +36,5 @@ sum_payments = sum_payments['amount'] # Select one column
 cumulative_payments[f'total_sum_payments_{currency}'] = sum_payments
 
 # Export as csv file
-print(f"FIND CUMULATIVE PAYMENTS BY ACCOUNT SINCE: {timestamp_str[:10]} IN GENERATED_TABLES DIRECTORY")
-cumulative_payments.to_csv(f"Generated_Tables/cumulative_payments_by_account_since_{timestamp_str[:10]}.csv", index=False)
+print(f"CUMULATIVE PAYMENTS BY ACCOUNT SINCE: {timestamp_str[:10]} IN OUTPUT DIRECTORY")
+cumulative_payments.to_csv(f"Output/cumulative_payments_by_account_since_{timestamp_str[:10]}.csv", index=False)
