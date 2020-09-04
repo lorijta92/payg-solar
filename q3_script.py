@@ -4,7 +4,7 @@
 import pandas as pd
 
 # Read in data
-payments = pd.read_csv("Resources/payments.csv")
+payments = pd.read_csv("../Resources/payments.csv")
 
 # Set currency
 currency = payments.currency[0]
@@ -21,19 +21,13 @@ payments['effective_when'] = pd.to_datetime(payments['effective_when'])
 # Create limited dataframe starting at indicated timestamp 
 payments_date_limited = payments.loc[payments['effective_when'] >= timestamp_dt]
 
-# Group by account_id and count number of records
-num_payments = payments_date_limited.groupby('account_id').count()
-num_payments = num_payments.rename_axis(None, axis=1).reset_index() # Flatten dataframe
-num_payments = num_payments.drop(columns=['effective_when','currency','amount']) # Drop columns
-cumulative_payments = num_payments.rename(columns={"id":"total_num_payments"}) # Rename columns
+# Group by account_id and perform aggregate functions
+cumulative_payments = payments_date_limited.groupby('account_id', as_index=False).agg({'id':'count','amount':'sum'})
 
-# Group by account_id and sum payment amounts
-sum_payments = payments_date_limited.groupby('account_id').sum()
-sum_payments = sum_payments.rename_axis(None, axis=1).reset_index()# Flatten dataframe
-sum_payments = sum_payments['amount'] # Select one column
-
-# Add series to cumulative_payments dataframe
-cumulative_payments[f'total_sum_payments_{currency}'] = sum_payments
+# Rename columns
+cumulative_payments = cumulative_payments.rename(columns={
+    'id':'total_num_payments',
+    'amount':f'total_sum_payments_{currency}'})
 
 # Export as csv file
 print(f"CUMULATIVE PAYMENTS BY ACCOUNT SINCE: {timestamp_str[:10]} IN OUTPUT DIRECTORY")
