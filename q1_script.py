@@ -5,8 +5,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Read in data
-accounts = pd.read_csv("../Resources/accounts.csv")
-gpa = pd.read_csv("../Resources/group_product_associations.csv")
+accounts = pd.read_csv("Resources/accounts.csv")
+gpa = pd.read_csv("Resources/group_product_associations.csv")
 
 # Rename columns
 gpa = gpa.rename(columns={"id":"gpa_id"})
@@ -43,7 +43,7 @@ def label_bars(rects):
 label_bars(registration_rect)
 
 # Save figure
-plt.savefig("../Output/product_registration1.png")
+plt.savefig("Output/product_registration1.png")
 
 # Drop outliers
 del x_values[31]
@@ -62,4 +62,6 @@ plt.ylabel("Number of Times Registered")
 label_bars(registration_rect2)
 
 # Save figure
-plt.savefig("../Output/product_registration2.png")
+plt.savefig("Output/product_registration2.png")
+
+print("BAR CHARTS IN OUTPUT DIRECTORY")

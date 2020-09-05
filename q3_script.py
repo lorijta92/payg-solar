@@ -5,7 +5,7 @@ import pandas as pd
 from datetime import timedelta
 
 # Read in data
-payments = pd.read_csv("../Resources/payments.csv")
+payments = pd.read_csv("Resources/payments.csv")
 
 # Set currency
 currency = payments.currency[0]

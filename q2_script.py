@@ -5,7 +5,7 @@ import pandas as pd
 from datetime import timedelta
 
 # Read in data
-ast = pd.read_csv("../Resources/account_state_transitions.csv")
+ast = pd.read_csv("Resources/account_state_transitions.csv")
 
 # Variable to take timestamp input.
 timestamp_str = input("Enter date with YYYY-MM-DD format.")
@@ -39,4 +39,4 @@ filtered_df[f'time_in_state_as_of_{timestamp_str[:10]}'] = time_in_state
 
 # Export to csv
 print(f"TOTAL TIME IN CURRENT STATE AS OF: {timestamp_str[:10]} IN OUTPUT DIRECTORY")
-filtered_df.to_csv(f"../Output/time_in_state_as_of_{timestamp_str[:10]}.csv", index=False)
+filtered_df.to_csv(f"Output/time_in_state_as_of_{timestamp_str[:10]}.csv", index=False)
