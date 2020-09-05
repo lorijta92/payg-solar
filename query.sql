@@ -15,7 +15,12 @@ ORDER BY effective_when DESC;
 -- end q1?
 
 -- START Q2
-SELECT started_when, account_id, from_state, to_state
-FROM account_state_transitions
-WHERE account_id=5
-ORDER BY started_when DESC;
+SELECT ast.started_when, ast.account_id, ast.to_state 
+FROM account_state_transitions AS ast
+INNER JOIN
+    (SELECT account_id, MAX(started_when) AS MaxDateTime
+    FROM account_state_transitions
+	 WHERE started_when < '2020-03-02'
+    GROUP BY account_id) groupedast 
+ON ast.account_id = groupedast.account_id 
+AND ast.started_when = groupedast.MaxDateTime;
