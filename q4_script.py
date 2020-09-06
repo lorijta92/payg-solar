@@ -27,20 +27,20 @@ merged_df['started_when'] = pd.to_datetime(merged_df['started_when']) # string t
 merged_limited_df = merged_df.loc[(merged_df['started_when'] <= timestamp_dt) & (merged_df['to_state']=='DISABLED')]
 
 # Group by account and count the occurrences of "DISABLED" state 
-disabled_grouped_df = disabled_limited_df.groupby('account_id',as_index=False).agg({
+limited_grouped_df = merged_limited_df.groupby('account_id',as_index=False).agg({
     'to_state':'count',
     'price_upfront':'max',
     'price_unlock':'max',
     'minimum_payment':'max',})
 
 # Rename column
-disabled_grouped_df = disabled_grouped_df.rename(columns={'to_state':'count_disabled'})
+limited_grouped_df = limited_grouped_df.rename(columns={'to_state':'count_disabled'})
 
 # Calculate nominal expected payment
-expected_payment = (disabled_grouped_df['count_disabled']*disabled_grouped_df['minimum_payment']) + disabled_grouped_df['price_upfront']
+expected_payment = (limited_grouped_df['count_disabled'] * limited_grouped_df['minimum_payment']) + limited_grouped_df['price_upfront']
 
 # Make new dataframe with account_id and expected_payment
-df = pd.DataFrame({'account_id':disabled_grouped_df['account_id'],
+df = pd.DataFrame({'account_id':limited_grouped_df['account_id'],
                   f'expected_payment_as_of_{timestamp_str}':expected_payment})
 
 # Preview dataframe
