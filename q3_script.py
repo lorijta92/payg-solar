@@ -22,7 +22,7 @@ timestamp_dt = timestamp_dt + timedelta(hours=23,minutes=59,seconds=59)
 # Convert 'effective_when' column from string to datetime object
 payments['effective_when'] = pd.to_datetime(payments['effective_when'])
 
-# Create limited dataframe starting at indicated timestamp 
+# Create limited dataframe based on indicated timestamp 
 payments_date_limited = payments.loc[payments['effective_when'] <= timestamp_dt]
 
 # Group by account_id and perform aggregate functions
