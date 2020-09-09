@@ -41,9 +41,10 @@ I then exported all results as csv files to the “Output” directory.
 ![image1]( https://github.com/lorijta92/payg-solar/blob/master/Output/Part2/account_overview.png?raw=true) 
 
 Out of 772 accounts:
-•	7 are written off
-•	292 are unlocked (roughly one-third)
-•	473 are ongoing (roughly two-thirds)
+* 7 are written off
+* 292 are unlocked (roughly one-third)
+* 473 are ongoing (roughly two-thirds)
+
 At first glance, it seems that clients reliably pay back their loans.
 
 ![image2]( https://github.com/lorijta92/payg-solar/blob/master/Output/Part2/registrations_over_time.png?raw=true)
