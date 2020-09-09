@@ -1,5 +1,7 @@
 Languages Used: Python with packages: Pandas, Matplotlib, and Numpy
 
+![ERD](https://github.com/lorijta92/payg-solar/blob/master/Resources/ERD.png?raw=true)
+
 ## Part 1
 
 **1a. Generate bar chart visualizing the relative frequency of Products registered with Accounts.**
