@@ -8,6 +8,9 @@ To find the frequency of product registration, I needed registration dates in th
 
 I then displayed the results in a bar chart and found that product number 32 skewed the chart with 1086 records whilst all others were in the 11-41 range. So I made another bar chart with product 32 manually removed to better see the trend with the other products. 
 
+![image](https://github.com/lorijta92/payg-solar/blob/master/Output/product_registration1.png?raw=true)
+
+![image](https://github.com/lorijta92/payg-solar/blob/master/Output/product_registration2.png?raw=true)
 
 **Parts 1b-d** were all dependent on a chosen arbitrary timestamp, so I used `.input()` to allow users to specify a chosen date. After converting the date string to a datetime object (`timestamp_dt`), I added 23 hours, 59 minutes, and 59 seconds to it to account for the full day. I could have also limited each dataframe by selecting all records less than `timestamp_dt + timedelta(days=1)`, to avoiding adding time to the timestamp in such a tedious manner, but felt that it was clearer to understand, even if it was more work. 
 
